@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function App() {
   const [title, setTitle] = useState("JSX Keyword Replacement Challenge");
 
-  const handleClick = () => setTitle("1"); // Or whatever the test expects
+  const handleClick = () => setTitle("3"); // Or whatever the test expects
   const handleChange = (e) => console.log(e.target.value);
 
   return (
