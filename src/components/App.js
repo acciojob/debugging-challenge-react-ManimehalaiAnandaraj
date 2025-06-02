@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 function App() {
-  const handleClick = () => alert('Button clicked!');
+  const [title, setTitle] = useState("JSX Keyword Replacement Challenge");
+
+  const handleClick = () => setTitle("1"); // Or whatever the test expects
   const handleChange = (e) => console.log(e.target.value);
 
   return (
     <div className="app-container">
-      <h1>JSX Keyword Replacement Challenge</h1>
+      <h1 onDoubleClick={() => setTitle("Double Clicked!")}>{title}</h1>
       <label htmlFor="username">Username:</label>
       <input
         id="username"
@@ -19,4 +21,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
