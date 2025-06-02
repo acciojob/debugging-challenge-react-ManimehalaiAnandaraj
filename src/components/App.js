@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function App() {
-  const [title, setTitle] = useState("JSX Keyword Replacement Challenge");
+  const [title, setTitle] = useState("Replacement Challenge");
   const [username, setUsername] = useState("");
 
   const handleClick = () => alert("Button Clicked");
