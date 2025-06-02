@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 function App() {
-  const [title, setTitle] = useState("JSX Keyword Replacement Challenge"); // Updated initial state
+  const [title, setTitle] = useState("Replacement Challenge");
   const [username, setUsername] = useState("");
 
-  const handleClick = () => alert("Button Clicked!");
+  const handleClick = () => alert("Button Clicked!"); // Alert on button click
   const handleChange = (e) => {
     setUsername(e.target.value); // Update the username state
     console.log(e.target.value);
