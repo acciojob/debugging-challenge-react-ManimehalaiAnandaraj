@@ -4,7 +4,7 @@ function App() {
   const [title, setTitle] = useState("JSX Keyword Replacement Challenge"); // Updated initial state
   const [username, setUsername] = useState("");
 
-  const handleClick = () => alert("Button Clicked");
+  const handleClick = () => alert("Button Clicked!");
   const handleChange = (e) => {
     setUsername(e.target.value); // Update the username state
     console.log(e.target.value);
