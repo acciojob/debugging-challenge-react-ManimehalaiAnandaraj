@@ -6,6 +6,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <h1>JSX Keyword Replacement Challenge</h1>
       <label htmlFor="username">Username:</label>
       <input
         id="username"
