@@ -2,9 +2,13 @@ import React, { useState } from "react";
 
 function App() {
   const [title, setTitle] = useState("JSX Keyword Replacement Challenge");
+  const [username, setUsername] = useState("");
 
-  const handleClick = () => alert("Button Clicked") // Or whatever the test expects
-  const handleChange = (e) => console.log(e.target.value);
+  const handleClick = () => alert("Button Clicked");
+  const handleChange = (e) => {
+    setUsername(e.target.value); // Update the username state
+    console.log(e.target.value);
+  };
 
   return (
     <div className="app-container">
@@ -14,7 +18,7 @@ function App() {
         id="username"
         type="text"
         maxLength={10}
-        readOnly
+        value={username} // Controlled input
         onChange={handleChange}
       />
       <button onClick={handleClick}>Submit</button>
