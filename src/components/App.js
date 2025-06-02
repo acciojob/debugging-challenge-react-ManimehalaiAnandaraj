@@ -1,29 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import '../styles/App.css';
 
-function App() {
-  const [title, setTitle] = useState("Replacement Challenge");
-  const [username, setUsername] = useState("");
+const App = () => {
 
-  const handleClick = () => alert("Button Clicked!"); // Alert on button click
-  const handleChange = (e) => {
-    setUsername(e.target.value); // Update the username state
-    console.log(e.target.value);
-  };
+  let [count, setCount] = useState(0)
 
   return (
-    <div className="app-container">
-      <h1 onDoubleClick={() => setTitle("Double Clicked!")}>{title}</h1>
-      <label htmlFor="username">Username:</label>
-      <input
-        id="username"
-        type="text"
-        maxLength={10}
-        value={username} // Controlled input
-        onChange={handleChange}
-      />
-      <button onClick={handleClick}>Submit</button>
+    <div className="ball">
+      <h1 className="count" onDoubleClick={() => { alert("cant edit it") }}>{count}</h1>
+      <button className='increment-button' onClick={() => { setCount(count + 1) }}>Increment</button>
     </div>
-  );
+  )
 }
+
 
 export default App;
